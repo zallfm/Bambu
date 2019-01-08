@@ -1,5 +1,6 @@
 // initialize express router
 let mongoose = require('mongoose');
+mongoose.set('useFindAndModify', false);
 // routing models
 let People = mongoose.model('People');
 // initialize express router
@@ -36,9 +37,9 @@ router.get('/people-like-you',(req, res, next) => {
     People.find(query)
         .select('name age latitude longitude monthlyIncome experienced score')
         // limit data result
-        .limit(99)
+        //.limit(99)
         // sort ascending
-        .sort( { score: 1 } )
+        .sort( { score: -1 } )
         .exec(function (err, peoples){
             if(err) return next(err);
             let peopleLikeYou = {

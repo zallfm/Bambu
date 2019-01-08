@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "f2ad0667-583c-4a50-a0d6-d27ae40346e7",
+		"name": "Bambu",
+		"description": "unit test for bambu api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "people-like-you",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"place\": {\n        \"title_place\": \"Borobudur2\",\n        \"desc_place\": \"Borobudur Temple2\",\n        \"img_place\": \"borobudur2.jpg\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9999/people-like-you",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"people-like-you"
+					]
+				},
+				"description": "bambu api view to result"
+			},
+			"response": []
+		},
+		{
+			"name": "people-like-you?age=30",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"place\": {\n        \"title_place\": \"Borobudur2\",\n        \"desc_place\": \"Borobudur Temple2\",\n        \"img_place\": \"borobudur2.jpg\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9999/people-like-you?age=30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"people-like-you"
+					],
+					"query": [
+						{
+							"key": "age",
+							"value": "30"
+						}
+					]
+				},
+				"description": "api for find age"
+			},
+			"response": []
+		},
+		{
+			"name": "addscore/5c2cf0fef5c1dd35aec73ccb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"place\": {\n        \"title_place\": \"Borobudur2\",\n        \"desc_place\": \"Borobudur Temple2\",\n        \"img_place\": \"borobudur2.jpg\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9999/addscore/5c2cf0fef5c1dd35aec73ccb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"addscore",
+						"5c2cf0fef5c1dd35aec73ccb"
+					]
+				},
+				"description": "adding score to data"
+			},
+			"response": []
+		}
+	]
+}
