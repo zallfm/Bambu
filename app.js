@@ -23,4 +23,4 @@ app.listen(port, function () {
     console.log("Running ApiBambu on port " + port);
 });
 
-// ➜ mongoimport -d bambuApi -c people --type csv --file ./project-nodejs/backend-bambu/data/data.csv --fields "name.string(),age.int32(),latitude.double(),longitude.double(),monthlyIncome.int32(),experienced.boolean()" --columnsHaveTypes --parseGrace skipRow
+
